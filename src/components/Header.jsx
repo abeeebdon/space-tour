@@ -1,10 +1,26 @@
 import img from '../assets/icon.png'
-import { FaBars } from 'react-icons/fa'
-const Header = ({ headerIcon }) => {
+import useWindowSize from '../hooks/useWindowSize'
+import Nav from './Nav'
+import Sidebar from './Sidebar'
+import { FaBars, FaTimes } from 'react-icons/fa'
+const Header = ({ headerButton, headerToggler }) => {
+  const { width } = useWindowSize()
   return (
     <header>
       <img src={img} alt="logo" />
-      <FaBars className="icon" onClick={() => headerIcon()} />
+      {width <= 650 ? (
+        <button className="icon-btn" onClick={() => headerButton()}>
+          {headerToggler ? (
+            <FaTimes className="icon" />
+          ) : (
+            <FaBars className="icon" />
+          )}
+        </button>
+      ) : (
+        <div className="nav">
+          <Nav />
+        </div>
+      )}
     </header>
   )
 }

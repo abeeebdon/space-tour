@@ -1,0 +1,36 @@
+.aside-container {
+  min-height: 100vh;
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background: url(../assets/Rectangle.png);
+  background-size: cover;
+}
+aside {
+  margin-top: 20vh;
+  width: 50vw;
+  height: 100%;
+  padding: 1rem;
+  padding-bottom: 100px;
+  a {
+    text-decoration: none;
+    color: #b8b2b2;
+
+    &:hover {
+      color: #fff;
+    }
+
+    .aside {
+      margin: 1.5rem 0px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+}
+a.active {
+  color: #fff;
+}

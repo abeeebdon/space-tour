@@ -1,5 +1,6 @@
 @import './styles/home.scss';
 @import './styles/header.scss';
+@import './styles/aside.scss';
 
 * {
   font-size: 1rem;

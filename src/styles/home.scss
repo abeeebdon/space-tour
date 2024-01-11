@@ -6,6 +6,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media only screen and (min-width: 650px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .text {
     // margin: 1rem  0px;
     h3 {
@@ -45,7 +54,11 @@
     background: url(../assets/bghome.png);
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
     position: relative;
+    @media only screen and (min-width: 650px) {
+      background: none;
+    }
     button {
       text-transform: uppercase;
       border: none;
@@ -61,9 +74,15 @@
       font-weight: 400;
       letter-spacing: 1.25px;
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 0;
       right: 0;
+      @media only screen and (min-width: 650px) {
+        position: absolute;
+        top: 40%;
+        bottom: 50%;
+        margin: 0 auto;
+      }
     }
   }
 }

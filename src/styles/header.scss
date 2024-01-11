@@ -1,12 +1,36 @@
 header {
   padding: 1rem;
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
+  z-index: 5;
+  .icon-btn {
+    background: none;
+    border: none;
+  }
   .icon {
-    font-size: 1.5rem;
-    &:hover {
-      color: red;
+    color: #d0d6f9;
+    font-size: 2rem;
+    background: none;
+  }
+}
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1rem;
+  background-color: #0b0d17;
+  a {
+    text-decoration: none;
+    outline: none;
+    color: #d0d6f9;
+    font-size: 1rem;
+    text-transform: uppercase;
+    .nav {
+      display: flex;
+      gap: 5%;
+      flex-direction: row;
     }
   }
 }
