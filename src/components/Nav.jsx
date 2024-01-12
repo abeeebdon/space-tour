@@ -6,7 +6,7 @@ const Nav = () => {
     <nav>
       {asideBlock.map((aside, index) => {
         return (
-          <NavLink to={aside.link}>
+          <NavLink to={aside.link} className="nav">
             <div className="nav" key={aside.id}>
               <p>{`0${index}`}</p>
               <p>{aside.name}</p>
