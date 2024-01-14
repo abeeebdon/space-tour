@@ -2,6 +2,8 @@
 @import './styles/header.scss';
 @import './styles/aside.scss';
 @import './styles/destination.scss';
+@import './styles/crew.scss';
+@import './styles/technology.scss';
 
 * {
   font-size: 1rem;

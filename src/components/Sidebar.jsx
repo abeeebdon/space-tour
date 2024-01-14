@@ -5,8 +5,8 @@ const Sidebar = () => {
     <aside>
       {asideBlock.map((aside, index) => {
         return (
-          <NavLink to={aside.link}>
-            <div className="aside" key={aside.id}>
+          <NavLink to={aside.link} key={aside.id}>
+            <div className="aside">
               <p>{`0${index}`}</p>
               <p>{aside.name}</p>
             </div>

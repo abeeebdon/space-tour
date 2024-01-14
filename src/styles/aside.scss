@@ -34,3 +34,8 @@ aside {
 a.active {
   color: #fff;
 }
+@media only screen and (min-width: 650px) {
+  .aside-container {
+    display: none;
+  }
+}

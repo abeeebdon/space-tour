@@ -23,7 +23,7 @@ const Index = () => {
         <div className="image">
           <img src={image} alt="img" />
         </div>
-        <div className="flex-2">
+        <div>
           <div className="btn-container">
             {destination.map((btn) => {
               const { id, title } = btn
