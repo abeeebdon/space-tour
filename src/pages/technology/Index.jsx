@@ -5,10 +5,15 @@ import { useEffect } from 'react'
 const Index = () => {
   const [tech, setTech] = useState('')
   const [index, setIndex] = useState(0)
+  const animate = () => {
+    const newIndex = (index + 1) % technology.length
+    setIndex(newIndex)
+  }
   useEffect(() => {
     const techs = technology[index]
     setTech(techs)
-  }, [])
+    setTimeout(animate, 3000)
+  }, [index])
   const { id, name, details, image } = tech
 
   const handleTech = (id) => {
