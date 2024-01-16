@@ -9,6 +9,7 @@
   font-size: 1rem;
   margin: 0;
   padding: 0;
+  outline: none;
   box-sizing: border-box;
 }
 
@@ -25,14 +26,4 @@ html {
   --bg: #0b0d17;
   --color1: #d0d6f9;
   --color2: #ffffff;
-}
-@media only screen and (max-width: 350px) {
-  html {
-    font-size: 75%;
-  }
-}
-@media only screen and (max-width: 500px) {
-  html {
-    font-size: 85%;
-  }
 }

@@ -19,17 +19,18 @@ header {
 }
 nav {
   display: flex;
-  gap: 1.5rem;
-  padding: 0px 1rem;
+  gap: 5%;
+  padding-right: 5rem;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.774227142333984px);
   a {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0px;
     text-decoration: none;
     outline: none;
     color: #d0d6f9;
     font-size: 1rem;
     text-transform: uppercase;
+
     .nav {
       display: flex;
       gap: 5%;

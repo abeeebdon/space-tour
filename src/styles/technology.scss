@@ -7,11 +7,12 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 2%;
     text-transform: uppercase;
     padding: 0;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: 768px) {
       justify-content: flex-start;
+      margin-left: 10vw;
       padding-left: 2rem;
       padding-top: 2rem;
     }
@@ -19,29 +20,54 @@
   .container {
     color: #fff;
     margin-top: 1rem;
+    @media only screen and (min-width: 768px) {
+      margin-top: 1rem;
+      display: grid;
+      gap: 2%;
+      grid-template-columns: 20% 1fr 1fr;
+      align-items: center;
+    }
     .image {
       text-align: center;
       width: 100%;
       margin: 0 auto;
+      @media only screen and (min-width: 768px) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+      }
       img {
         display: inline-block;
         width: 100%;
+        @media only screen and (min-width: 768px) {
+          height: 60vh;
+        }
       }
     }
   }
   .btn {
     margin: 1.5rem 0px;
     display: flex;
+    flex-direction: row;
     gap: 2%;
     justify-content: center;
     align-items: center;
+    @media only screen and (min-width: 768px) {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      flex-direction: column;
+      gap: 1rem;
+    }
     button {
-      padding: 0.7rem;
+      padding: 1rem;
       border-radius: 50%;
       box-shadow: none;
       border: 1px solid black;
-      background: #3a3636;
+      background: #6c6c74;
       outline: none;
+      &:hover {
+        cursor: pointer;
+        background-color: #fff;
+      }
     }
     .active {
       background: #fff;
@@ -50,9 +76,10 @@
   .text {
     text-align: center;
     margin: 0.8rem 0px 1rem 0px;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: 768px) {
       text-align: left;
-      margin-bottom: 2rem;
+      grid-column-start: 2;
+      grid-row-start: 1;
     }
     h4 {
       margin: 1rem 0px;

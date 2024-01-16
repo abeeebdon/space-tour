@@ -5,14 +5,10 @@ import { useEffect } from 'react'
 const Index = () => {
   const [tech, setTech] = useState('')
   const [index, setIndex] = useState(0)
-  const animate = () => {
-    const newIndex = (index + 1) % technology.length
-    setIndex(newIndex)
-  }
+
   useEffect(() => {
     const techs = technology[index]
     setTech(techs)
-    setTimeout(animate, 3000)
   }, [index])
   const { id, name, details, image } = tech
 
@@ -29,24 +25,28 @@ const Index = () => {
         <p>03</p>
         <h3>Space Launch 101</h3>
       </div>
-      <div className="container">
-        <article key={id}>
-          <div className="image">
-            <img src={image} alt="img" />
-          </div>
-          <div className="btn">
-            {technology.map((tech) => {
-              const { id } = tech
-              return <button onClick={() => handleTech(id)}>{id}</button>
-            })}
-          </div>
-          <div className="text">
-            <h4>role</h4>
-            <h2>{name}</h2>
-            <p>{details}</p>
-          </div>
-        </article>
-      </div>
+      <article className="container" key={id}>
+        <div className="image">
+          <img src={image} alt="img" />
+        </div>
+        <div className="btn">
+          {technology.map((tech) => {
+            return (
+              <button
+                className={id === tech.id ? 'active' : 'inactive'}
+                onClick={() => handleTech(tech.id)}
+              >
+                {tech.id}
+              </button>
+            )
+          })}
+        </div>
+        <div className="text">
+          <h4>role</h4>
+          <h2>{name}</h2>
+          <p>{details}</p>
+        </div>
+      </article>
     </section>
   )
 }
