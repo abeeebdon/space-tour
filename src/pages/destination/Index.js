@@ -4,11 +4,11 @@ import { useEffect } from 'react'
 const Index = () => {
   const [destinations, setDestinations] = useState([])
   const handleBtnDestination = (id) => {
-    const alldestination = destination.find((destin) => destin.id == id)
+    const alldestination = destination.find((destin) => destin.id === id)
     setDestinations(alldestination)
   }
   useEffect(() => {
-    const alldestination = destination.find((destin) => destin.id == 1)
+    const alldestination = destination.find((destin) => destin.id === 1)
     setDestinations(alldestination)
   }, [])
   const { title, text, id, distance, time, image } = destinations

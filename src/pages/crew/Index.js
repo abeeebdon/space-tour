@@ -4,14 +4,15 @@ import { crew } from '../../data'
 const Index = () => {
   const [singleCrew, setSingleCrew] = useState('')
   const [index, setIndex] = useState(0)
-  const animate = () => {
-    const newIndex = (index + 1) % crew.length
-    setIndex(newIndex)
-  }
+
   useEffect(() => {
+    const animate = () => {
+      const newIndex = (index + 1) % crew.length
+      setIndex(newIndex)
+    }
     const single = crew[index]
     setSingleCrew(single)
-    // clearInterval(setTimeout(animate, 3000))
+    clearInterval(setTimeout(animate, 3000))
   }, [index])
   const { id, image, name, role, details } = singleCrew
   const handleBtn = (id) => {
@@ -19,6 +20,7 @@ const Index = () => {
       if (person.id === id) {
         return setSingleCrew(person)
       }
+      return
     })
   }
   return (
@@ -36,7 +38,7 @@ const Index = () => {
             return (
               <button
                 key={button.id}
-                className={id == button.id ? 'active' : 'inactive'}
+                className={id === button.id ? 'active' : 'inactive'}
                 onClick={() => handleBtn(button.id)}
               ></button>
             )

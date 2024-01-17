@@ -4,12 +4,12 @@ import { useEffect } from 'react'
 
 const Index = () => {
   const [tech, setTech] = useState('')
-  const [index, setIndex] = useState(0)
+  // const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    const techs = technology[index]
+    const techs = technology[0]
     setTech(techs)
-  }, [index])
+  }, [])
   const { id, name, details, image } = tech
 
   const handleTech = (id) => {

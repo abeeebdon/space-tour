@@ -1,7 +1,6 @@
 import img from '../assets/icon.png'
 import useWindowSize from '../hooks/useWindowSize'
 import Nav from './Nav'
-import Sidebar from './Sidebar'
 import { FaBars, FaTimes } from 'react-icons/fa'
 const Header = ({ headerButton, headerToggler }) => {
   const { width } = useWindowSize()
