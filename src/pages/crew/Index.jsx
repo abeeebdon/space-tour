@@ -11,7 +11,7 @@ const Index = () => {
   useEffect(() => {
     const single = crew[index]
     setSingleCrew(single)
-    setTimeout(animate, 3000)
+    // clearInterval(setTimeout(animate, 3000))
   }, [index])
   const { id, image, name, role, details } = singleCrew
   const handleBtn = (id) => {

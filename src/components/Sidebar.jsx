@@ -1,12 +1,15 @@
 import { NavLink } from 'react-router-dom'
 import { asideBlock } from '../data'
-const Sidebar = () => {
+const Sidebar = ({ setHeaderToggler }) => {
+  const handleAsideBtn = () => {
+    setHeaderToggler(false)
+  }
   return (
-    <aside>
+    <aside onMouseLeave={() => handleAsideBtn()}>
       {asideBlock.map((aside, index) => {
         return (
           <NavLink to={aside.link} key={aside.id}>
-            <div className="aside">
+            <div className="aside" onClick={() => handleAsideBtn()}>
               <p>{`0${index}`}</p>
               <p>{aside.name}</p>
             </div>

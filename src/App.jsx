@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   const [headerToggler, setHeaderToggler] = useState(false)
+
   const headerButton = () => {
     setHeaderToggler(!headerToggler)
   }
@@ -17,7 +18,7 @@ const App = () => {
       <Header headerButton={headerButton} headerToggler={headerToggler} />
       {headerToggler && (
         <div className="aside-container">
-          <Sidebar />
+          <Sidebar setHeaderToggler={setHeaderToggler} />
         </div>
       )}
       <Routes>

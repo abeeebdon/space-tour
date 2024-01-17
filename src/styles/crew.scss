@@ -1,6 +1,7 @@
 .crew {
   width: 100%;
   padding: 1rem;
+  min-height: 89vh;
   padding-bottom: 0px;
 
   .head {
@@ -22,7 +23,7 @@
   .crew-item {
     width: 100%;
     height: 100%;
-    padding: 1rem 0px 0px 0px;
+    padding-top: 1rem;
     .image {
       text-align: center;
       width: 100%;
@@ -51,13 +52,13 @@
     }
     .text {
       text-align: center;
-      margin: 0.8rem 0px 1rem 0px;
+      margin-top: 0.8rem;
       @media only screen and (min-width: 768px) {
         text-align: left;
         margin-bottom: 2rem;
       }
       h4 {
-        margin: 1.5rem 0px;
+        margin: 0.3rem 0px;
         text-align: center;
         text-transform: uppercase;
         font-size: 1.5rem;
@@ -65,7 +66,7 @@
       p {
         color: #d0d6f9;
         font-size: 1.2rem;
-        padding: 1rem;
+        padding: 0.5rem;
         line-height: 25px;
       }
       h2 {
