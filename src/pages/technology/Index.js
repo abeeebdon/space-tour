@@ -17,6 +17,7 @@ const Index = () => {
       if (techie.id === id) {
         return setTech(techie)
       }
+      return false
     })
   }
   return (

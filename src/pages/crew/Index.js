@@ -20,7 +20,7 @@ const Index = () => {
       if (person.id === id) {
         return setSingleCrew(person)
       }
-      return
+      return false
     })
   }
   return (
