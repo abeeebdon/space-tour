@@ -43,7 +43,7 @@ export const destination = [
 export const crew = [
   {
     id: 1,
-    image: './img1.png',
+    image: './crew/image-douglas-hurley.png',
     role: 'commander',
     name: 'Douglas hurley',
     details:
@@ -51,7 +51,7 @@ export const crew = [
   },
   {
     id: 2,
-    image: './img2.png',
+    image: './crew/image-mark-shuttleworth.png',
     role: 'mission specialist',
     name: 'mark shuttleworth',
     details:
@@ -59,7 +59,7 @@ export const crew = [
   },
   {
     id: 3,
-    image: './img3.png',
+    image: './crew/image-victor-glover.png',
     role: 'pilot',
     name: 'victor glover',
     details:
@@ -67,7 +67,7 @@ export const crew = [
   },
   {
     id: 4,
-    image: './img4.png',
+    image: './crew/image-anousheh-ansari.png',
     role: 'flight engineer',
     name: 'anousheh ansari',
     details:
