@@ -4,25 +4,29 @@ import { crew } from '../../data'
 const Index = () => {
   const [singleCrew, setSingleCrew] = useState('')
   const [index, setIndex] = useState(0)
-
-  useEffect(() => {
-    const animate = () => {
-      const newIndex = (index + 1) % crew.length
-      setIndex(newIndex)
-    }
+  const [stopAnimate, setStopAnimate] = useState(false)
+  const animate = () => {
+    const newIndex = (index + 1) % crew.length
+    setIndex(newIndex)
     const single = crew[index]
     setSingleCrew(single)
-    clearInterval(setTimeout(animate, 3000))
-  }, [index])
+  }
+  if (!stopAnimate) {
+    setTimeout(animate, 3000)
+  }
   const { id, image, name, role, details } = singleCrew
   const handleBtn = (id) => {
     crew.find((person) => {
       if (person.id === id) {
-        return setSingleCrew(person)
+        setSingleCrew(person)
+        setStopAnimate(true)
       }
       return false
     })
   }
+  setTimeout(() => {
+    setStopAnimate(false)
+  }, 5000)
   return (
     <section className="crew">
       <div className="head">
