@@ -16,7 +16,8 @@ const App = () => {
   return (
     <div className="App">
       <Header headerButton={headerButton} headerToggler={headerToggler} />
-      {/* the headerToggler is controlled by the button in the header component from the headerButton here if the headerToggler is true the sideBAr is shown*/}
+      {/* the headerToggler is controlled by the button in the header component
+     from the headerButton here if the headerToggler is true the sideBAr is shown*/}
       {headerToggler && (
         <div className="aside-container">
           <Sidebar setHeaderToggler={setHeaderToggler} />
