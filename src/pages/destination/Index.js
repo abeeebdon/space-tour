@@ -1,16 +1,29 @@
 import { useState } from 'react'
 import { destination } from '../../data'
-import { useEffect } from 'react'
 const Index = () => {
-  const [destinations, setDestinations] = useState([])
+  const [destinations, setDestinations] = useState('')
+  const [index, setIndex] = useState(0)
+  const [stopAnimate, setStopAnimate] = useState(false)
+
+  //handleBtn is a click event that don has an id passed in
   const handleBtnDestination = (id) => {
     const alldestination = destination.find((destin) => destin.id === id)
     setDestinations(alldestination)
+    setStopAnimate(true)
   }
-  useEffect(() => {
-    const alldestination = destination.find((destin) => destin.id === 1)
-    setDestinations(alldestination)
-  }, [])
+  const animate = () => {
+    const newIndex = (index + 1) % destination.length
+    setIndex(newIndex)
+    const single = destination[index]
+    setDestinations(single)
+  }
+  if (!stopAnimate) {
+    setTimeout(animate, 3000)
+  }
+  setTimeout(() => {
+    setStopAnimate(false)
+  }, 5000)
+
   const { title, text, id, distance, time, image } = destinations
 
   return (
@@ -26,10 +39,13 @@ const Index = () => {
         <div>
           <div className="btn-container">
             {destination.map((btn) => {
-              const { id, title } = btn
               return (
-                <button key={id} onClick={() => handleBtnDestination(id)}>
-                  {title}
+                <button
+                  key={btn.id}
+                  className={btn.id === id ? 'active' : 'inactive'}
+                  onClick={() => handleBtnDestination(btn.id)}
+                >
+                  {btn.title}
                 </button>
               )
             })}

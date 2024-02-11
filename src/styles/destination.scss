@@ -58,12 +58,11 @@
         margin-top: 1rem;
         text-transform: uppercase;
         padding: 0.5rem;
-        border: none;
         outline: none;
-        background: none;
-        border-bottom: 5px solid #000;
-        border: transparent;
+        background: transparent;
         color: #d0d6f9;
+        border: none;
+        border-bottom: 5px solid transparent;
         font-size: 1rem;
         font-weight: 400;
         letter-spacing: 2.362px;
@@ -71,6 +70,10 @@
         &:hover {
           border-bottom: 5px solid #fff;
         }
+      }
+
+      .active {
+        border-bottom: 5px solid #fff;
       }
     }
 
