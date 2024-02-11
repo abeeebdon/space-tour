@@ -7,6 +7,7 @@ const Header = ({ headerButton, headerToggler }) => {
   return (
     <header>
       <img src={img} alt="logo" />
+      {/* if width is less than 650, a  hamburger icon will be shown and it will change to crossBar using the 'state' headerToggler otherwise a nva component is rendered*/}
       {width <= 650 ? (
         <button className="icon-btn" onClick={() => headerButton()}>
           {headerToggler ? (
