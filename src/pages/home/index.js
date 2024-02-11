@@ -1,4 +1,7 @@
-const index = () => {
+import { useNavigate } from 'react-router-dom'
+
+const Index = () => {
+  const navigate = useNavigate()
   return (
     <section className="home">
       <div className="text">
@@ -12,9 +15,15 @@ const index = () => {
         </p>
       </div>
       <div className="btn-container">
-        <button>Explore</button>
+        <button
+          onClick={() => {
+            navigate('/destination')
+          }}
+        >
+          Explore
+        </button>
       </div>
     </section>
   )
 }
-export default index
+export default Index
