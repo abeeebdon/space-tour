@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Header from './components/Header'
 import Home from './pages/home/Index'
+import Header from './components/Header'
 import Destination from './pages/destination/Index'
 import Crew from './pages/crew/Index'
 import Technology from './pages/technology/Index'
